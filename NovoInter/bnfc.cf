@@ -1,0 +1,24 @@
+-- Símbolo inicial
+Prog. Program ::= [Stmt] ;
+terminator Stmt "" ;
+
+-- Declarações
+Assign. Stmt ::= Var "=" Expr ;
+Print.  Stmt ::= "print" Expr ;
+
+-- Expressões
+EAdd.   Expr ::= Expr "+" Term ;
+ESub.   Expr ::= Expr "-" Term ;
+ESimp.  Expr ::= Term ;
+
+TMul.   Term ::= Term "*" Factor ;
+TDiv.   Term ::= Term "/" Factor ;
+TSimp.  Term ::= Factor ;
+
+FInt.   Factor ::= Integer ;
+FVar.   Factor ::= Var ;
+FPar.   Factor ::= "(" Expr ")" ;
+
+-- Tokens
+token Integer (digit+) ;
+token Var (letter (letter | digit)*) ;

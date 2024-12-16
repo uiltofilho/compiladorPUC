@@ -1,0 +1,11 @@
+x = 10 + 20;
+print x;
+
+y = "Hello";
+z = "World";
+print y + " " + z;
+
+arr[0] = 5;
+arr[1] = 10;
+print arr[0] + arr[1];
+
